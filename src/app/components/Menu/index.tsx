@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { MenuButton, MenuContainer } from "./styles"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { MenuButton, MenuContainer } from "./styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export const Menu = () => {
+  const [menuIsVisible, setMenuVisibility] = useState(false);
 
-  const [menuIsVisible, setMenuVisibility] = useState(false)
-
-  const openMenu = () => setMenuVisibility(true)
-  const closeMenu = () => setMenuVisibility(false)
+  const openMenu = () => setMenuVisibility(true);
+  const closeMenu = () => setMenuVisibility(false);
 
   return (
     <>
@@ -34,5 +33,5 @@ export const Menu = () => {
         </ul>
       </MenuContainer>
     </>
-  )
-}
+  );
+};
